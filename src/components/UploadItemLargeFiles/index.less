@@ -1,0 +1,62 @@
+@import '@common/global.less';
+
+.@{prefix}-webuploader-large-file{
+    cursor: pointer;
+
+    .ant-progress .ant-progress-outer .ant-progress-inner{
+        height: 2px;
+    }
+    .ant-form-item-control{
+        .ant-form-item-explain-error ~ .ant-form-item-control-input{
+            border: 1px solid black;
+            background-color: red;
+        }
+        .ant-form-item-explain-success{
+            margin-top: 8px;
+        }
+    }
+    &-item:hover{
+        .@{prefix}-webuploader-large-file-operations{
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 6px;
+        }
+        .acudicon-outlined-close{
+            margin-right: 3px;
+        }
+        background: #F7F7F9;
+        transition: background-color .3s;
+    }
+    &-item-ERROR{
+        .@{prefix}-webuploader-large-file-header{
+            color: #F33E3E;
+            display: flex;
+            align-items: flex-start;
+            overflow: hidden;
+            line-height: 1.5715;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            font-size: 12px;
+        }
+    }
+    &-item{
+        margin-top: 4px;
+    }
+}
+
+
+
+#hosted-application-large-file-picker{
+    .webuploader-element-invisible{
+        background-color: red;
+        display: none;
+    }
+}
+.webuploader-pick{
+    display: flex;
+    align-items: center;
+   .acudicon-outlined-button-upload{
+       margin-left: 4px;
+    //    margin-top: 0.6px;
+    }
+}

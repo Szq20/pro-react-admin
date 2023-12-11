@@ -14,7 +14,7 @@ const App = () => {
       .then(() => setLoading(false))
       .catch(() => setLoading(false))
     Watermark({
-      content: 'Pro React Admin', // 水印文本
+      content: '大碗米饭', // 水印文本
       container: document.getElementById('root'), // 水印容器区域
     })
   }, [])

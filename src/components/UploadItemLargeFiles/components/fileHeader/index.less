@@ -1,0 +1,25 @@
+@import '@common/global.less';
+
+.@{prefix}-webuploader-large-file{
+    &-header{
+        display: flex;
+        align-items: flex-start;
+        padding: 3px;
+        padding-bottom: 0px;
+        margin-top: 3px;
+        &-icon{
+            width: 14px;
+            height: 15px;
+            margin-right: 4px;
+        }
+        &-name{
+            overflow:hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            -o-text-overflow:ellipsis;
+            a{
+                color: #000;
+            }
+        }
+    }
+}

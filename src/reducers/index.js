@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import inReducer from './increment'
 import deReducer from './decrement'
+import deReducer from './auth'
 
 const reducers = {
   inReducer,
