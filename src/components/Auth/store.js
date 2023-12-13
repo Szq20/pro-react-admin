@@ -4,19 +4,19 @@
  */
 
 function funAuthData() {
-  let authList = []
+    let authList = [];
 
-  function setFunctionAuthList(authData) {
-    authList = authData
-  }
+    function setFunctionAuthList(authData) {
+        authList = authData;
+    }
 
-  function getFunctionAuthList() {
-    return authList
-  }
+    function getFunctionAuthList() {
+        return authList;
+    }
 
-  return {
-    setFunctionAuthList,
-    getFunctionAuthList,
-  }
+    return {
+        setFunctionAuthList,
+        getFunctionAuthList
+    };
 }
-export default funAuthData()
+export default funAuthData();

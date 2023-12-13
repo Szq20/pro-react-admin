@@ -1,5 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-export const ErrorBoundaryContext = React.createContext(() => {})
+export const ErrorBoundaryContext = React.createContext(() => {});
 
-export const useErrorHandling = () => React.useContext(ErrorBoundaryContext)
+export const useErrorHandling = () => React.useContext(ErrorBoundaryContext);

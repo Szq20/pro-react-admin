@@ -101,6 +101,7 @@
     "@babel/runtime": "^7.22.6",
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
+    "@ecomfe/eslint-config": "^8.0.0",
     "@koa/cors": "^4.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@sentry/vite-plugin": "^2.4.0",

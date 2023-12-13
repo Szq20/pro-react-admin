@@ -1,12 +1,12 @@
-import { useEffect, useRef } from 'react'
+import {useEffect, useRef} from 'react';
 // https://github.com/kentcdodds/use-deep-compare-effect
 
 const useInitialRender = () => {
-  const ref = useRef()
-  useEffect(() => {
-    ref.current = true
-  }, [])
-  return ref.current
-}
+    const ref = useRef();
+    useEffect(() => {
+        ref.current = true;
+    }, []);
+    return ref.current;
+};
 
-export default useInitialRender
+export default useInitialRender;

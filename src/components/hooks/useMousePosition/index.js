@@ -1,3 +1,3 @@
-import useMousePosition from './use-mouse-position.ts'
+import useMousePosition from './use-mouse-position.ts';
 
-export default useMousePosition
+export default useMousePosition;

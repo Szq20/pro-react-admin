@@ -1,5 +1,5 @@
-import request from '@server/request'
+import request from '@server/request';
 
-import api from '@api'
+import api from '@api';
 // api注册说明
-export const getSchema = (getSchemaUri) => request.get(getSchemaUri)
+export const getSchema = (getSchemaUri) => request.get(getSchemaUri);

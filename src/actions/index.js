@@ -1,9 +1,9 @@
-import * as inAction from './increment'
-import * as deAction from './decrement'
+import * as inAction from './increment';
+import * as deAction from './decrement';
 
 const rootAction = {
-  inAction,
-  deAction,
-}
+    inAction,
+    deAction
+};
 
-export default rootAction
+export default rootAction;

@@ -1,9 +1,9 @@
-import { useRef } from 'react'
+import {useRef} from 'react';
 
 const useRefVariable = (value) => {
-  const ref = useRef()
-  ref.current = value
-  return ref
-}
+    const ref = useRef();
+    ref.current = value;
+    return ref;
+};
 
-export default useRefVariable
+export default useRefVariable;

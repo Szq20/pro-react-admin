@@ -1,8 +1,8 @@
 const waitTime = (time = 100) =>
-  new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(true)
-    }, time)
-  })
+    new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(true);
+        }, time);
+    });
 
-export default waitTime
+export default waitTime;

@@ -1,13 +1,12 @@
-import { combineReducers } from 'redux'
-import inReducer from './increment'
-import deReducer from './decrement'
-import deReducer from './auth'
+import {combineReducers} from 'redux';
+import inReducer from './increment';
+import deReducer from './decrement';
 
 const reducers = {
-  inReducer,
-  deReducer,
-}
+    inReducer,
+    deReducer
+};
 
-const rootReducer = combineReducers(reducers)
+const rootReducer = combineReducers(reducers);
 
-export default rootReducer
+export default rootReducer;

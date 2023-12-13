@@ -1,3 +1,3 @@
-const getToken = () => 'token'
+const getToken = () => 'token';
 
-export default getToken
+export default getToken;
