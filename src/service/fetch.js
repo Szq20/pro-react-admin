@@ -29,10 +29,10 @@ const parseToQuery = (query) =>
 const initOptions = {
     method: 'GET', // POST, *GET,  PUT, DELETE, PATCH, [HEAD, CONNECT, OPTIONS, TRACE]
     headers: {
-    // Accept: 'application/json',
+        // Accept: 'application/json',
         'Content-Type': 'application/json;charset=utf-8'
-    // text/plain;charset=UTF-8 *application/json;charset=utf-8 application/x-www-form-urlencoded
-    // Authorization: getToken() ? `Bearer ${getToken()}` : null,
+        // text/plain;charset=UTF-8 *application/json;charset=utf-8 application/x-www-form-urlencoded
+        // Authorization: getToken() ? `Bearer ${getToken()}` : null,
     },
     signal: null,
     credentials: 'include' // include *same-origin
@@ -124,7 +124,9 @@ const handleFetchData = (url, options) => {
                                     type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
                                 });
                                 const disposition = response.headers.get('content-disposition');
-                                const fileName = decodeURI(disposition?.split('=')[1].replace(/'/g, '')).replace("utf-8''", '') || '';
+                                const fileName
+                                    = decodeURI(
+                                        disposition?.split('=')[1].replace(/'/g, '')).replace("utf-8''", '') || '';
                                 const objectUrl = URL.createObjectURL(blob);
                                 const downloadElement = document.createElement('a');
                                 document.body.appendChild(downloadElement);

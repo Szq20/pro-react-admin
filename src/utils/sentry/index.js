@@ -9,8 +9,8 @@ const sentryInit = () => {
         integrations: [new Sentry.BrowserTracing()],
         tracesSampleRate: 1.0,
         release: packageJson.version
-    // environment: nodeEnv,
-    // autoSessionTracking: nodeEnv === 'production',
+        // environment: nodeEnv,
+        // autoSessionTracking: nodeEnv === 'production',
     });
 
     Sentry.setExtra('projectOwner', '150****5870');

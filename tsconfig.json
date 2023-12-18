@@ -22,9 +22,10 @@
         "skipLibCheck": true,
         "paths": {
             "@src/*": ["src/*"],
-            "@images/*": ["src/assets/images/*"],
-            "@sse/*": ["src/server/sse/*"],
             "@*": ["./src/*"],
+            "@/*": ["./src/*"],
+            "@stateless/*": ["src/components/stateless/*"],
+
         },
         "typeRoots": ["node_modules/@types"],
         "noImplicitAny": false
