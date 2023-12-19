@@ -53,6 +53,7 @@ const config = {
         extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
         alias: {
             '@src': path.resolve('./src'),
+            '@components': path.resolve('./src/components'),
             '@stateless': path.resolve('./src/components/stateless'),
             '@stateful': path.resolve('./src/components/stateful'),
             '@hooks': path.resolve('./src/components/hooks'),
@@ -168,6 +169,15 @@ const config = {
                             },
                             sourceMap: true
                         }
+                    },
+                    {
+                        loader: require.resolve('less-loader'),
+                        options: {
+                            lessOptions: {
+                                javascriptEnabled: true
+                            },
+                            sourceMap: false
+                        }
                     }
                 ]
             },
@@ -196,9 +206,9 @@ const config = {
                 type: 'asset',
                 parser: {
                     // Conditions for converting to base64
-                    dataUrlCondition: {
-                        maxSize: 25 * 1024 // 25kb
-                    }
+                    // dataUrlCondition: {
+                    //     maxSize: 25 * 1024 // 25kb
+                    // }
                 },
                 generator: {
                     filename: 'images/[contenthash][ext][query]'
@@ -226,6 +236,14 @@ const config = {
                     // 这里专门针对json文件的处理
                     filename: 'static/json/[name].[hash][ext][query]'
                 }
+            },
+            {
+                test: /.(pdf|doc|docx|txt)$/,
+                use: [
+                    {
+                        loader: 'file-loader'
+                    }
+                ]
             }
         ]
     }

@@ -9,7 +9,8 @@ import {
     QuestionCircleOutlined,
     FireOutlined,
     GlobalOutlined,
-    QrcodeOutlined
+    QrcodeOutlined,
+    ReadOutlined
 } from '@ant-design/icons';
 
 import styles from './index.module.less';
@@ -63,7 +64,7 @@ const ProSecNav = () => {
 
     const menuItems = [
         {label: 'Home', key: '/', icon: <HomeOutlined />},
-        {label: 'DemoTest', key: '/demoTest', icon: <GlobalOutlined />},
+        {label: 'FileRenderTest', key: '/fileRender', icon: <ReadOutlined />},
         {label: 'Demo', key: '/demo', icon: <GlobalOutlined />},
         {label: 'Parallax', key: '/parallax', icon: <FireOutlined />},
         {label: 'QrGenerate', key: '/qrcode', icon: <QrcodeOutlined />},

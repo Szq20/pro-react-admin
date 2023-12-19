@@ -22,14 +22,18 @@
         "skipLibCheck": true,
         "paths": {
             "@src/*": ["src/*"],
-            "@*": ["./src/*"],
+            "@components/*": ["src/components/*"],
+            "@components": ["src/components"],
+            "@*": ["./*"],
             "@/*": ["./src/*"],
             "@stateless/*": ["src/components/stateless/*"],
-
         },
         "typeRoots": ["node_modules/@types"],
         "noImplicitAny": false
     },
-  "include": ["src", "typings"],
+  "include": ["src", "src/**/*","typings"],
   "exclude": ["node_modules", "dist"],
+  "resolve": {
+    "extensions": ["ts","js", "jsx"]
+    }
 }
