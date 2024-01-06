@@ -1,4 +1,4 @@
-import request from '@server/request';
+import request from '@src/server/request';
 
 import api from '@api';
 // 镜像上传（大文件）

@@ -1,4 +1,4 @@
-import request from '@server/request';
+import request from '@src/server/request';
 
 import api from '@api';
 // api注册说明

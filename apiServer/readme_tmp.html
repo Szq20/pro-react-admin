@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>readme.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<ol>
+<li>背景
+以智能云统一API规范为准， 根据实际业务使用情况， 做适当的扩展与细节补充。</li>
+<li>规范
+2.1 前端
+1、HTTP Request Method 是 POST，不用RESTful规范（特殊情况可以用GET：获取文件或者其他静态资源）
+2、HTTP Request Header 中的 Content-Type 的值是  'application/json; charset=utf-8'
+3、HTTP Request Body 是 合法的 JSON
+4、所有请求的字段名，使用驼峰命名，首字母小写
+{
+&quot;keyword&quot;: [],
+&quot;keywordType&quot;: [],
+&quot;name&quot;: 1,
+&quot;id&quot;: 10,
+}</li>
+</ol>
+<p>2.2 后端
+1、HTTP Response Header 中的 Content-Type 的值是  'application/json; charset=utf-8'
+2、HTTP Response Body 是 合法的JSON
+3、所有接口名，使用驼峰命名，首字母小写
+4、所有接口url中不包含任何可变参数，前端传参都在Request Body体中传给服务端
+/api/iqi/v1/queue/listByRole
+建议根据增删改查不同场景， 接口url增加对应的动词后缀， 如下说明：</p>
+<ol>
+<li>
+<p>获取详情
+/api/iqi/v1/configuration/detail
+/api/iqi/v1/configuration/get</p>
+</li>
+<li>
+<p>获取列表
+/api/iqi/v1/configuration/list  分页接口
+/api/iqi/v1/configuration/allList [建议]所有数据，不分页返回</p>
+</li>
+<li>
+<p>删除
+/api/iqi/v1/dataset/delete</p>
+</li>
+<li>
+<p>创建
+/api/iqi/v1/dataset/create   [建议]创建接口最后是create
+/api/iqi/v1/dataset/add</p>
+</li>
+<li>
+<p>更新
+/api/iqi/v1/dataset/update        除了主键，需要更新什么传什么字段，不传的字段不更新。  不推荐必须传所有字段才能更新
+/api/iqi/v1/dataset/updateStatus  这种更新某个字段的接口是可以的
+/api/iqi/v1/dataset/updateName    这种更新某个字段的接口是可以的</p>
+</li>
+</ol>
+<p>4、所有响应的字段值，使用如下规则
+（1）使用驼峰风格， 首字母小写
+（2）空对象请使用 {}
+（2）空列表请使用 []
+（3）空字符串请使用  &quot;&quot;
+（5）『避免使用null』一定不行！！， undefined也不建议，建议字段不返回。
+（6）真假值：应该用数值0和1或者Boolean值标识逻辑判断的假和真，  禁止使用字符串形式，推荐还是使用boolean    true | false
+5、时间格式：使用UTC格式输出，比如  2014-06-12T13:16:22Z
+6、接口文档相关  ——   TODO： RD文档规范
+（1）接口文档写在知识库中 （待讨论）
+（2）接口如有更新， 需要及时更改， 在原位置更改， 无需另建位置，需要永远有一份最新的接口文档。
+（3）接口文档内容需要包括:
+a. 接口中文说明
+b. 接口参数说明， 包括请求参数与响应参数， 包括中文描述、类型说明、枚举定义、是否必须 、默认值 等
+c. 需要请求与响应示例
+d. 如果是分页数据， 需要备注：响应是分页结构返回</p>
+<ol start="3">
+<li>具体说明
+一个完整的接口说明，主要包含三部分：请求API、请求参数、响应结果。
+⚠️  HTTP Response Code 必须为 200, 一切非200请求都会视为服务故障统计到SLA中。
+（1）请求参数 和 响应结果的 每个字段名及字段值 都需列举出来。
+（2）必要时需在对应字段后进行 注释说明，包括字段含义、字段值类型、默认值、字段是否可能为空。
+对于枚举类型或字段有关联性的，需在 响应结果 下方详细给出说明，参考下方【分页列表】、【详情页】。
+1、正常结果
+响应结果 必须包含  success 字段，其值为布尔型。
+success 为true时表示请求成功；
+success 为false时表示请求失败（详情见下方【异常结果】）。</li>
+</ol>
+<p>除【分页列表】外，还必须包含 result 字段，其值可能是 任意数组、对象；
+而【分页列表】这里必须是 page 字段（详情见下方【分页列表】）；
+前端真正读取的是result 或 page 字段的值。</p>
+<p>Response
+// 返回数组
+{
+&quot;success&quot;: true,
+&quot;result&quot;: [&quot;value-1&quot;, &quot;value-2&quot;]
+// &quot;result&quot;: {&quot;field-1&quot;: &quot;field-value-1&quot;}</p>
+<p>}</p>
+<p>// 返回对象
+{
+&quot;success&quot;: true,
+&quot;result&quot;: {&quot;field-1&quot;: &quot;field-value-1&quot;}
+// &quot;page&quot;: {} // 详情见【分页列表】
+}</p>
+<p>// 分页列表
+{
+&quot;success&quot;: true,
+&quot;page&quot;: {} // 详情见【分页列表】
+}
+2、异常结果
+success 为 false时表示请求失败，必须提供 message 字段用于错误处理。
+必须有 code 错误状态码， 表示错误状态码
+message 是一个对象，其包含字段为global 、field、redirect 三者之一。</p>
+<p>1、global error
+global 表示通用错误处理。一般会由全局错误处理以toast的形式展示给客户。
+{
+&quot;success&quot;: false,
+&quot;code&quot;: &quot;notFound&quot;, // 当success false必传 这边其实是errorCode! 不是http code!
+&quot;message&quot;: {
+&quot;global&quot;: &quot;这里是错误信息&quot; // 直接给用户看的错误信息，是要友好的。
+}
+}
+2、field error
+field 表示表单字段错误。在表单提交给后端后，如果某些字段未能通过后端校验，则返回对应字段的错误信息。（field 中的key与空间中的name相对应，错误信息就可以展示在空间后面）。
+{
+&quot;success&quot;: false,
+&quot;code&quot;: &quot;notFound&quot;,
+&quot;message&quot;: {
+&quot;field&quot;: {
+&quot;key1&quot;: &quot;错误信息1&quot;,
+&quot;key2&quot;: &quot;错误信息2&quot;
+}
+}
+}
+3、session expired
+redirect：表示重定向。一般用于用户长时间未操作，以致Session失效的情况；一般响应格式如下，表示需要重定向，并给出重定向的地址，前端针对性地进行处理。
+{
+&quot;success&quot;: false,
+&quot;code&quot;: &quot;xxx&quot;
+&quot;message&quot;: {
+&quot;redirect&quot;: &quot;/login&quot;
+}
+}</p>
+<p>3、分页列表
+在 请求参数 中：
+pageNo、pageSize 为必填参数，且值为数字；pageNo 表示当前页码，pageSize 表示每页显示数量；
+order为可选参数，值为 &quot;asc&quot; 或 &quot;desc&quot; ；
+orderBy为可选参数，值为列表中的字段名，需与order一起被传递。</p>
+<p>在 响应结果 中：
+不使用 result 字段，而是使用 page 字段。且 page 中必须包含 pageNo、pageSize、totalCount，result 字段，若请求参数中包含了order 和 orderBy，则 响应结果中也必须包含这两个字段。
+totalCount 表示全部列表的条数，其值为数字。
+result 表示 当前页的列表结果，其值为数组。</p>
+<p>Request URL
+POST /api/iqi/user/list</p>
+<p>Request
+{
+&quot;pageNo&quot;: 1, // 必传 从1开始代表第一页
+&quot;pageSize&quot;: 10, // 每页多少条数据
+&quot;order&quot;: &quot;asc&quot;, // &quot;asc&quot; | &quot;desc&quot; 可选
+&quot;orderBy&quot;: &quot;userName&quot; // 可选
+}
+Response
+{
+&quot;success&quot;: true,
+&quot;page&quot;: {
+&quot;pageNo&quot;: 1,  // 必须重新返回前端
+&quot;pageSize&quot;: 10, // 必须重新返回前端
+&quot;totalCount&quot;: 100, // 总条数
+&quot;order&quot;: &quot;asc&quot;,
+&quot;orderBy&quot;: &quot;userName&quot;,
+&quot;result&quot;: [
+{
+&quot;userName&quot;: &quot;user1&quot;, // 用户名
+&quot;userId&quot;: &quot;1234567890&quot;, // 用户ID
+&quot;email&quot;: &quot;user1@baidu.com&quot;, // 用户email
+&quot;state&quot;: &quot;Active&quot; // 用户状态，枚举型，详情见下方描述
+},
+{
+&quot;userName&quot;: &quot;user2&quot;,
+&quot;userId&quot;: &quot;2234567890&quot;,
+&quot;email&quot;: &quot;user2@baidu.com&quot;,
+&quot;state&quot;: &quot;Creating&quot;
+}
+]
+}
+}
+state字段解释：
+序号
+状态名
+中文文本
+其他
+1
+Active
+启用
+无
+2
+Creating
+创建中
+此状态下，启用、禁用按钮不可用
+3
+Forbidden
+禁用
+无
+4
+Deleting
+删除中
+此状态下，启用、禁用按钮不可用
+4、列表数据获取全部数据
+在请求参数中：
+列表获取全部数据时， 无需传入 pageSize、pageNo 等字段
+在响应结果中：
+直接使用result 字段， 返回数组
+Response
+{
+success: true,
+result: [
+{
+&quot;userName&quot;: &quot;user1&quot;, // 用户名
+&quot;userId&quot;: &quot;1234567890&quot;, // 用户ID
+&quot;email&quot;: &quot;user1@baidu.com&quot;, // 用户email
+},
+{
+&quot;userName&quot;: &quot;user2&quot;,
+&quot;userId&quot;: &quot;2234567890&quot;,
+&quot;email&quot;: &quot;user2@baidu.com&quot;,
+}
+]
+}
+4. 其他建议约束</p>
+<ol>
+<li>无用数据过滤操作由后端处理，遵循最简接口原则</li>
+<li>在提交类接口需要校验时，前端做基础性校验，后端做业务校验。</li>
+<li>不建议过多使用SSE, SSE 会与HTTP 一样占用浏览器线程数， chrome 最大并发数是 6个， 建议使用websocket做消息推送</li>
+<li>接口示例</li>
+</ol>
+
+</body>
+</html>

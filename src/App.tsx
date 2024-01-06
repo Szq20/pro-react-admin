@@ -6,6 +6,9 @@ import rootRouter from './routers';
 import AuthRouter from './routers/authRouter';
 import {sentryInit} from './utils';
 
+
+
+
 const App = () => {
     // const [loading, setLoading] = useState(true);
     // const asyncCall = () => new Promise<void>((resolve) => setTimeout(() => resolve(), 500));
@@ -26,9 +29,7 @@ const App = () => {
     //     return null;
     // }
     return (
-        <>
-            <AuthRouter>{element}</AuthRouter>
-        </>
+        <AuthRouter>{element}</AuthRouter>
     );
 };
 

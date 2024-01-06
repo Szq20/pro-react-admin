@@ -1,5 +1,5 @@
 import React from 'react';
-import {reqFetch, useReqFetch} from '@src/service';
+// import {reqFetch, useReqFetch} from '@src/service';
 import {Select, Table, Cascader, Space} from 'antd';
 import FixTabPanel from '@stateless/FixTabPanel';
 import {toFixed} from '@utils/aidFn';
@@ -63,19 +63,19 @@ const viteEnvMode = import.meta?.env?.MODE ?? 'webapck env';
 const viteEnvVariableValue = import.meta?.env?.VITE_GREETINGS ?? 'webapck env';
 
 const ProDemo = () => {
-    const [res, loading, error] = useReqFetch('https://my-json-server.typicode.com/wkylin/angular-json-server/react', {
-        method: 'GET'
-    });
+    // const [res, loading, error] = useReqFetch('https://my-json-server.typicode.com/wkylin/angular-json-server/react', {
+    //     method: 'GET'
+    // });
 
-    const onFetch = () => {
-        reqFetch('/faker/shops', {method: 'GET'})
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((errors) => {
-                console.log('error', errors);
-            });
-    };
+    // const onFetch = () => {
+    //     reqFetch('/faker/shops', {method: 'GET'})
+    //         .then((response) => {
+    //             console.log(response);
+    //         })
+    //         .catch((errors) => {
+    //             console.log('error', errors);
+    //         });
+    // };
 
     return (
         <FixTabPanel>
@@ -83,10 +83,10 @@ const ProDemo = () => {
                 项目文档<span style={{fontSize: 12, color: '#999', margin: '0 10px'}}>待完善</span>
             </h2>
             <h4>Mock API 示例</h4>
-            <h4>useFetch: {loading ? 'Loading...' : error ? 'error' : JSON.stringify(res, null, 2)}</h4>
-            <div onClick={onFetch} aria-hidden="true">
+            {/* <h4>useFetch: {loading ? 'Loading...' : error ? 'error' : JSON.stringify(res, null, 2)}</h4> */}
+            {/* <div onClick={onFetch} aria-hidden="true">
                 ErrorBoundary
-            </div>
+            </div> */}
             <h4>File Upload</h4>
             <FileUpload />
 

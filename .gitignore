@@ -7,6 +7,6 @@ compilation-stats.json
 .yarn/cache
 /packagehash.txt
 public/bit
-api/node_modules
+apiServer/node_modules
 webpack/profiling
 stats.html

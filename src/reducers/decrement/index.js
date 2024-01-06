@@ -1,4 +1,4 @@
-import rootAction from '@src/actions';
+import rootAction from '@src/reducers/actions';
 
 const initialState = {
     deNumber: 0

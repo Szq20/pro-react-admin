@@ -24,16 +24,18 @@
             "@src/*": ["src/*"],
             "@components/*": ["src/components/*"],
             "@components": ["src/components"],
+            "@constants": ["src/constants"],
+            "@services": ["src/services"],
+            "@server": ["src/server"],
             "@*": ["./*"],
             "@/*": ["./src/*"],
             "@stateless/*": ["src/components/stateless/*"],
+            "@redux": ["src/redux"],
+
         },
         "typeRoots": ["node_modules/@types"],
         "noImplicitAny": false
     },
   "include": ["src", "src/**/*","typings"],
   "exclude": ["node_modules", "dist"],
-  "resolve": {
-    "extensions": ["ts","js", "jsx"]
-    }
 }

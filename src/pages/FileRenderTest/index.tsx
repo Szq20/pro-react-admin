@@ -36,7 +36,6 @@ const DemoTest: React.FC = () => {
     }, [testFile]);
 
     useEffect(() => {
-        console.log(fileType, 'fileType---');
         switch (fileType) {
             case 'pdf':
                 setTestFile(pdfTest);

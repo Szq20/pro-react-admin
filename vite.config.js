@@ -36,22 +36,22 @@ export default defineConfig({
                 }
             ]
         })
-    // createHtmlPlugin({
-    //   inject: {
-    //     data: {
-    //       title: 'Pro React Vite',
-    //       favicon: path.resolve(__dirname, './public/favicon.ico'),
-    //     },
-    //   },
-    // }),
-    // sentryVitePlugin({
-    //   org: 'wkylin',
-    //   project: 'promotion-web',
-    //   authToken: '73acdaa05e174744804f105c6e3365533e42da87ada6496bbc42d5a208f23a31',
-    //   sourcemaps: {
-    //     assets: './dist/**',
-    //   },
-    // }),
+        // createHtmlPlugin({
+        //   inject: {
+        //     data: {
+        //       title: 'Pro React Vite',
+        //       favicon: path.resolve(__dirname, './public/favicon.ico'),
+        //     },
+        //   },
+        // }),
+        // sentryVitePlugin({
+        //   org: 'wkylin',
+        //   project: 'promotion-web',
+        //   authToken: '73acdaa05e174744804f105c6e3365533e42da87ada6496bbc42d5a208f23a31',
+        //   sourcemaps: {
+        //     assets: './dist/**',
+        //   },
+        // }),
     ],
     define: {
         process // 解决未定义问题，推荐 import.meta.env
@@ -72,26 +72,35 @@ export default defineConfig({
     server: {
         open: true,
         proxy: {
-            '/faker': {
-                target: 'http://localhost:4000',
-                pathRewrite: {'^/faker': ''},
-                secure: false,
+            '^/apis': {
+                target: 'http://localhost:3000',
                 changeOrigin: true,
-                cookieDomainRewrite: 'localhost'
-            },
-            '/wkylin': {
-                // target: 'https://jsonplaceholder.typicode.com',
-                // target: service[env.proxy] // --env.proxy=test
-                target: 'https://my-json-server.typicode.com',
-                // pathRewrite: { '^/wkylin': '/wkylin' },
                 secure: false,
-                changeOrigin: true
-            },
-            '/v2': {
-                target: 'https://www.mocky.io',
-                secure: false,
-                changeOrigin: true
+                rewrite: (path) => {
+                    console.log(path, 'proxy-rewrite');
+                    return path.replace(/^\/apis/, '/apis');
+                }
             }
+            // '/faker': {
+            //     target: 'http://localhost:4000',
+            //     pathRewrite: {'^/faker': ''},
+            //     secure: false,
+            //     changeOrigin: true,
+            //     cookieDomainRewrite: 'localhost'
+            // },
+            // '/wkylin': {
+            //     // target: 'https://jsonplaceholder.typicode.com',
+            //     // target: service[env.proxy] // --env.proxy=test
+            //     target: 'https://my-json-server.typicode.com',
+            //     // pathRewrite: { '^/wkylin': '/wkylin' },
+            //     secure: false,
+            //     changeOrigin: true
+            // },
+            // '/v2': {
+            //     target: 'https://www.mocky.io',
+            //     secure: false,
+            //     changeOrigin: true
+            // }
         }
     },
     // 去除console和debugger
@@ -116,8 +125,8 @@ export default defineConfig({
                 // },
             }
         }
-    },
-    preview: {
-        port: 4173
     }
+    // preview: {
+    //     port: 4173
+    // }
 });

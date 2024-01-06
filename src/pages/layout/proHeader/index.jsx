@@ -1,20 +1,16 @@
-import React from 'react';
-// import React, { useEffect, useState } from 'react'
+import React, {useEffect} from 'react';
 import {Layout, Space, Dropdown, Switch, theme} from 'antd';
 import {UserOutlined, LogoutOutlined, GithubOutlined, DownOutlined, SmileOutlined} from '@ant-design/icons';
-// import Icon, { UserOutlined, LogoutOutlined, SettingOutlined, GithubOutlined } from '@ant-design/icons'
 import {useNavigate} from 'react-router-dom';
 import {removeLocalStorage} from '@utils/publicFn';
-// import { ReactComponent as LightSvg } from '@assets/svg/light.svg'
-// import { ReactComponent as DarkSvg } from '@assets/svg/dark.svg'
-// import LightSvg from '@assets/svg/light.svg'
-// import DarkSvg from '@assets/svg/dark.svg'
 
 import {useProThemeContext} from '@theme/hooks';
 
 import PrimaryNav from '../primaryNav';
 import styles from './index.module.less';
 import Fullscreen from '../fullscreen';
+
+import {getUserDetail} from '@services';
 
 const ProHeader = () => {
     const navigate = useNavigate();
@@ -63,6 +59,18 @@ const ProHeader = () => {
     const {
         token: {colorBgContainer, colorBorder}
     } = theme.useToken();
+    const getData = async () => {
+        try {
+            const res = await getUserDetail();
+            console.log(res, 'res');
+        } catch (error) {
+            console.log(error, 'error');
+        }
+    };
+
+    useEffect(() => {
+        getData();
+    }, []);
 
     return (
         <Layout.Header

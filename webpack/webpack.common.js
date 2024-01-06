@@ -62,7 +62,11 @@ const config = {
             '@pages': path.resolve('./src/pages'),
             '@routers': path.resolve('./src/routers'),
             '@utils': path.resolve('./src/utils'),
-            '@theme': path.resolve('./src/theme')
+            '@theme': path.resolve('./src/theme'),
+            '@constants': path.resolve('./src/constants'),
+            '@services': path.resolve('./src/services'),
+            '@server': path.resolve('./src/server'),
+            '@redux': path.resolve('./src/redux')
         },
         symlinks: false
     },
