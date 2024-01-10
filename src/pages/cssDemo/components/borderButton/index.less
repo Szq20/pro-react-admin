@@ -1,0 +1,49 @@
+.borderButton {
+  width: 100px;
+  height: 40px;
+  background-color: transparent;
+  color: orange;
+  border-radius: 10px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  //   outline: 4px solid #000;
+}
+.borderButton::before {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  content: "";
+  z-index: -2;
+  //   background-color: orange;
+  background: linear-gradient(
+    360deg,
+    #4fcf70,
+    #fad648,
+    #a767e5,
+    #12bcfe,
+    #44ce7b
+  );
+  left: 50%;
+  top: 50%;
+  animation: rotation 4s linear infinite;
+  transform-origin: left top; //旋转中心
+}
+.borderButton::after {
+  position: absolute;
+  content: "";
+  --w: 2px;
+  width: calc(100% - 2 * var(--w));
+  height: calc(100% - 2 * var(--w));
+  left: var(--w);
+  top: var(--w);
+  z-index: -1;
+  background-color: #000;
+  border-radius: inherit;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(1turn);
+  }
+}

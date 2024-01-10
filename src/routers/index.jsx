@@ -15,6 +15,8 @@ const SignUp = lazy(() => import('@pages/signup'));
 const Layout = lazy(() => import('@pages/layout'));
 const Home = lazy(() => import('@pages/home'));
 const Demo = lazy(() => import('@pages/demo'));
+const CssDemo = lazy(() => import('@pages/cssDemo'));
+
 const FileRenderTest = lazy(() => import('@pages/FileRenderTest'));
 const Coupons = lazy(() => import('@pages/coupons'));
 const CouponsHome = lazy(() => import('@pages/coupons/home'));
@@ -58,6 +60,14 @@ const rootRouter = [
                 key: '/demo',
                 auth: true,
                 element: lazyLoad(Demo)
+            },
+            {
+                index: false,
+                path: 'cssDemo',
+                name: 'cssDemo',
+                key: '/cssDemo',
+                auth: true,
+                element: lazyLoad(CssDemo)
             },
             {
                 index: false,
