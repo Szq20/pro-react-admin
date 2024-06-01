@@ -77,7 +77,7 @@ export default defineConfig({
                 changeOrigin: true,
                 secure: false,
                 rewrite: (path) => {
-                    console.log(path, 'proxy-rewrite');
+                    // console.log(path, 'proxy-rewrite');
                     return path.replace(/^\/apis/, '/apis');
                 }
             }
@@ -105,7 +105,7 @@ export default defineConfig({
     },
     // 去除console和debugger
     esbuild: {
-        pure: ['console.log', 'debugger']
+        pure: ['// console.log', 'debugger']
     },
     build: {
         sourcemap: true,

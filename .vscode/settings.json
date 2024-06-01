@@ -74,14 +74,9 @@
   "eslint.codeActionsOnSave.rules": null,
   "eslint.run": "onType",
   "eslint.options": {
-    "extensions": [
-      ".js",
-      ".vue",
-      ".jsx",
-      ".tsx"
-    ]
+    "extensions": [".js", ".vue", ".jsx", ".tsx"]
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   }
 }

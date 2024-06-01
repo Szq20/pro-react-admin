@@ -30,10 +30,10 @@ portfinder.getPort(
         }
         app.listen(port, 'localhost', (error, result) => {
             if (error) {
-                console.log(error);
+                // console.log(error);
             }
-            console.log('result', result);
-            console.log(`Listening at localhost:${port}`);
+            // console.log('result', result);
+            // console.log(`Listening at localhost:${port}`);
         });
     }
 );

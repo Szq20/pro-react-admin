@@ -28,8 +28,8 @@ const FileRender: React.FC<FileRenderProps> = props => {
         file
     } = props;
 
-    console.log(file, 'FileRender-file');
-    console.log(type, 'FileRender-type');
+    // console.log(file, 'FileRender-file');
+    // console.log(type, 'FileRender-type');
 
 
 

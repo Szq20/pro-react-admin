@@ -30,7 +30,7 @@ const TxtRender = (props: docxProps) => {
                 resolve(reader.result);
             };
             reader.onerror = reject;
-            console.log(charset, 'charset');
+            // console.log(charset, 'charset');
             reader.readAsText(blob, charset);
         });
     };
@@ -41,19 +41,19 @@ const TxtRender = (props: docxProps) => {
             reader.readAsDataURL(blob);
             reader.onload = function (e) { // 获取文件真实编码
                 let base64Str: string = reader.result as string;
-                console.log(base64Str, 'base64Str');
+                // console.log(base64Str, 'base64Str');
                 let str = atob(base64Str?.split(';base64,')[1]);
-                // console.log(str, 'str---');
+                // // console.log(str, 'str---');
 
                 let encoding = jschardet.detect(str);
-                console.log(encoding, 'encoding---');
+                // console.log(encoding, 'encoding---');
 
                 let charset = encoding.encoding;
-                console.log(charset, 'charset---');
+                // console.log(charset, 'charset---');
                 if (charset === 'window-1252') {
                     charset = 'ANSI';
                 }
-                console.log(charset, 'charset---');
+                // console.log(charset, 'charset---');
                 resolve('window-1252');
             };
         });
@@ -71,7 +71,7 @@ const TxtRender = (props: docxProps) => {
                 console.error('转换失败:', error);
             });
 
-        console.log(file, 'response');
+        // console.log(file, 'response');
     };
     useEffect(() => {
         if (file) {

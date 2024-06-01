@@ -133,7 +133,7 @@ const defaultJsonSchema = (getSchemaUri, schemaKey, editorID, yamlMatch) => {
     //     delete schemaProperties.parmmeters;
     // }
 
-    // // console.log(schemaProperties, 'schemaProperties');
+    // // // console.log(schemaProperties, 'schemaProperties');
 
     return [
         {
@@ -177,9 +177,9 @@ const yamlToJsonFormat = (text) => {
     } catch (error) {
         showError('语法解析错误, 请检查语法');
         console.error('yaml.load', error);
-    // console.log(error, 'error---');
+    // // console.log(error, 'error---');
     } finally {
-    // console.log(formatYaml, 'yamlToJsonFormat---');
+    // // console.log(formatYaml, 'yamlToJsonFormat---');
     }
     return formatYaml;
 };
@@ -201,12 +201,12 @@ const jsonToYamlFormat = (text) => {
             showError('语法解析错误, 请检查语法');
         }
     } finally {
-    // console.log(formatJson, 'yamlToJsonFormat---');
+    // // console.log(formatJson, 'yamlToJsonFormat---');
     }
     return formatJson;
 };
 const fromatCode = (editor) => {
-    // console.log('formatDocument格式化');
+    // // console.log('formatDocument格式化');
     editor.getAction('editor.action.formatDocument').run();
     if (editor?.getValue() && editor?.getModel()) {
         try {
@@ -218,7 +218,7 @@ const fromatCode = (editor) => {
                 endColumn: editor?.getModel()?.getLineLength ? editor?.getModel()?.getLineLength(1) : 0
             });
         } catch (error) {
-            // console.log('折叠展开后的鼠标选中位置:' + error);
+            // // console.log('折叠展开后的鼠标选中位置:' + error);
         }
     }
 };

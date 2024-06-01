@@ -1,5 +1,10 @@
 # Pro React Admin
 
+node: v18.x.x
+Fe: <http://localhost:8080/>
+apiServer:<http://localhost:3000/>
+
+
 ![check-status](https://img.shields.io/github/checks-status/wkylin/pro-react-admin/main 'check-status')
 ![build status](https://img.shields.io/github/workflow/status/wkylin/pro-react-admin/CodeQL 'build status')
 ![version-status](https://img.shields.io/github/package-json/v/wkylin/pro-react-admin 'version-status')

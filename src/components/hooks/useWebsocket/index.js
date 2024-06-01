@@ -34,7 +34,7 @@ const useWebsocket = ({url, verify}) => {
                 setMessage(e.data);
             };
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     };
 
@@ -55,7 +55,7 @@ const useWebsocket = ({url, verify}) => {
             ws.current = null;
             creatWebSocket();
         } catch (e) {
-            console.log(e);
+            // console.log(e);
         }
     };
 

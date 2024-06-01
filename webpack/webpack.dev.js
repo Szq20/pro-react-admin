@@ -9,7 +9,7 @@ const devProxy = require('./dev.proxy');
 
 const devWebpackConfig = merge(common, {
     mode: 'development',
-    devtool: 'eval-cheap-module-source-map',
+    devtool: 'eval-source-map',
     cache: {type: 'memory'},
     devServer: {
         allowedHosts: 'all',

@@ -146,7 +146,7 @@ function ComEditor(props) {
                                 try {
                                     return new Worker(new URL('monaco-editor/esm/vs/language/json/json.worker', import.meta.url));
                                 } catch (error) {
-                                    // console.log(error, 'error：：：：');
+                                    // // console.log(error, 'error：：：：');
                                 }
 
                             case 'javascript':
@@ -158,14 +158,14 @@ function ComEditor(props) {
                                 throw new Error(`Unknown label ${label}`);
                         }
                     } catch (error) {
-                        // console.log(error, 'error：：：：');
+                        // // console.log(error, 'error：：：：');
                     }
                 }
             };
 
             const {editor} = editorRef.current;
             const yamlMatch = `${editorID}.yaml`;
-            // console.log(editorID, 'editorID');
+            // // console.log(editorID, 'editorID');
             const yamlModelUri = monaco.Uri.parse(schemaKey + yamlMatch);
             const yamlSchemas = defaultSchema(getSchemaUri, yamlMatch, schemaKey, 'yaml');
             const monacoYaml = configureMonacoYaml(monaco, {
@@ -185,17 +185,17 @@ function ComEditor(props) {
                 try {
                     const text = model.getValue(); // 获取文件内容
                     const forMatText = jsonToYamlFormat(text);
-                    // console.log(model, 'model');
+                    // // console.log(model, 'model');
                     model.setValue(forMatText); // 更新编辑器内容
                     getMarks(editor, model, null, yamlModelUri);
                 } catch (error) {
                     console.error('YAML解析错误:', error);
-                    // console.log(error, 'error---');
+                    // // console.log(error, 'error---');
                 } finally {
                     const markers = monaco.editor.getModelMarkers({owner: yamlModel});
                     const realMarks = markers.filter((item) => item?.resource?._formatted === yamlModelUri?._formatted);
-                    // console.log(markers, 'markers-yaml');
-                    // console.log(realMarks, 'realMarks-yaml');
+                    // // console.log(markers, 'markers-yaml');
+                    // // console.log(realMarks, 'realMarks-yaml');
                     hasMarkCallBack && hasMarkCallBack(realMarks);
                 }
             };
@@ -212,14 +212,14 @@ function ComEditor(props) {
             });
             monaco.editor.setModelLanguage(yamlModel, languageType);
         } catch (error) {
-            // console.log(error, 'error：：：：');
+            // // console.log(error, 'error：：：：');
         }
     }, [editorRef, editorID]);
 
     useEffect(() => {
         try {
             // 初始化注册事件
-            // console.log('初始化注册事件');
+            // // console.log('初始化注册事件');
 
             if (editorRef.current && editorOperates?.current && model) {
                 const {editor} = editorRef.current;
@@ -267,7 +267,7 @@ function ComEditor(props) {
                 });
             }
         } catch (error) {
-            // console.log(error, 'error');
+            // // console.log(error, 'error');
         }
         return () => {
             model && model?.dispose();
@@ -339,7 +339,7 @@ function ComEditor(props) {
                                     options={optionsLang}
                                     size="small"
                                     onChange={(e) => {
-                                        // console.log(e, 'value');
+                                        // // console.log(e, 'value');
                                         setLanguageType(e.target.value);
                                     }}
                                 />

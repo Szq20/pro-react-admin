@@ -70,10 +70,10 @@ const ProDemo = () => {
     // const onFetch = () => {
     //     reqFetch('/faker/shops', {method: 'GET'})
     //         .then((response) => {
-    //             console.log(response);
+    //             // console.log(response);
     //         })
     //         .catch((errors) => {
-    //             console.log('error', errors);
+    //             // console.log('error', errors);
     //         });
     // };
 

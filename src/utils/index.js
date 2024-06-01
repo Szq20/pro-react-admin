@@ -12,7 +12,7 @@ const showSuccess = msg => {
 };
 
 const showError = msg => {
-    console.log(msg, 'msg');
+    // console.log(msg, 'msg');
     message.error({
         type: 'error',
         content: msg,

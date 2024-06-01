@@ -13,10 +13,10 @@ module.exports = require('knex')({
     // 打印错误
     log: {
         success(message) {
-            console.log('[knex success]', message);
+            // console.log('[knex success]', message);
         },
         error(message) {
-            console.log('[knex error]', message);
+            // console.log('[knex error]', message);
         }
     }
 });

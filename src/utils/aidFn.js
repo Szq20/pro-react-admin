@@ -226,7 +226,7 @@ export const copyTextToClipboard = async (textToCopy) => {
     try {
         if (navigator?.clipboard?.writeText) {
             await navigator.clipboard.writeText(textToCopy);
-            console.log('已成功复制到剪贴板');
+            // console.log('已成功复制到剪贴板');
         }
     } catch (err) {
         console.error(`复制到剪贴板失败:${err.message}`);

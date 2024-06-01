@@ -36,7 +36,7 @@ function useTableChange(props = {}) {
 
     const actionObj = {
         filter: (filters) => {
-            console.log(filters, filterItems);
+            // console.log(filters, filterItems);
             const isSameFilter = isEqual(filters, filterItems);
             if (isSameFilter) {
                 return null;
@@ -67,7 +67,7 @@ function useTableChange(props = {}) {
    * @param {*} extra action paginate | sort | filter
    */
     const onTableChange = (pagination, filters, sorter, extra) => {
-        console.log(pagination, filters, sorter, extra, 'pagination, filters, sorter, extra');
+        // console.log(pagination, filters, sorter, extra, 'pagination, filters, sorter, extra');
         const {action} = extra;
 
         const dataObj = {

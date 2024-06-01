@@ -12,14 +12,14 @@ const runPromise = async (fn) => {
 const promise = () =>
     new Promise((res) => {
         setTimeout(() => {
-            console.log('1');
+            // console.log('1');
             res('promise');
         }, 3000);
     });
 
 async function test() {
     const [res] = await runPromise(promise);
-    console.log('23', res);
+    // console.log('23', res);
 }
 
 test();
@@ -35,10 +35,10 @@ const fetchDataFromServer = (params) => () =>
 async function main() {
     const [res1, error1] = await runPromise(fetchDataFromServer('123'));
     const [res2, error2] = await runPromise(fetchDataFromServer());
-    console.log('res1', res1);
-    console.log('error1', error1);
-    console.log('res2', res2);
-    console.log('error2', error2);
+    // console.log('res1', res1);
+    // console.log('error1', error1);
+    // console.log('res2', res2);
+    // console.log('error2', error2);
 }
 
 main();

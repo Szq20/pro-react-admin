@@ -16,7 +16,7 @@ const download = async function (param = {}) {
         withCredentials: true,
         responseType: 'blob'
     }).then(response => {
-        console.log(response, 'response');
+        // console.log(response, 'response');
         return response;
     }).then(res => {
 

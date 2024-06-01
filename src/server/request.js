@@ -48,13 +48,13 @@ const handleLogin = data => {
 request.interceptors.response.use(
     response => {
         const {data} = response || {};
-        console.log(response, 'response:::');
+        // console.log(response, 'response:::');
         handleError(data);
         // handleLogin(data);
         return data;
     },
     error => {
-        console.log('error::::', error);
+        // console.log('error::::', error);
         showError(error.toString());
         return Promise.reject(error.toString());
     },

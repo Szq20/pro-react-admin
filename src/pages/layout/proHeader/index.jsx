@@ -62,9 +62,9 @@ const ProHeader = () => {
     const getData = async () => {
         try {
             const res = await getUserDetail();
-            console.log(res, 'res');
+            // console.log(res, 'res');
         } catch (error) {
-            console.log(error, 'error');
+            // console.log(error, 'error');
         }
     };
 

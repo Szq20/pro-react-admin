@@ -81,7 +81,7 @@ function useTableData(props) {
                 setData({data: resData, totalCount: totalCount || resData?.length});
             }
         } catch (e) {
-            console.log('e', e);
+            // console.log('e', e);
             showError(e?.global || e.toString());
         } finally {
             setLoading(false);

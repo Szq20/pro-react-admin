@@ -1,6 +1,6 @@
 /**
- * @file  权限注入高阶组件(用于复杂组件权限构建)
- * @author shenzhiqiang01(shenzhiqiang01@baidu.com)
+ * @file 权限注入高阶组件(用于复杂组件权限构建)
+ * @author liqianyu@baidu.com
  */
 
 /**
@@ -22,31 +22,31 @@
  */
 
 import * as React from 'react';
-import {useSelector} from 'react-redux';
 import _ from 'lodash';
 
+import authStore from './store';
 import {checkElementAuth} from './utils';
 
 interface NoAuthOptionComplexType {
-    props: Record<string, any>
-    component: React.ComponentType<any>
+    props: Record<string, any>;
+    component: React.ComponentType<any>;
 }
 
-type NoAuthOption = NoAuthOptionComplexType | Record<string, any> | React.ComponentType<any>
+type NoAuthOption = NoAuthOptionComplexType | Record<string, any> | React.ComponentType<any>;
 
 interface AuthComponentProps {
-    renderredComponent: React.ComponentType<any>
-    renderredProps: Record<string, any>
+    renderredComponent: React.ComponentType<any>;
+    renderredProps: Record<string, any>;
 }
 
 /**
- * 判断是否为 React 组件。
+ * 判断是否为 React 函数组件。
  *
  * @param component - 需要判断的任意对象。
  * @returns 如果是 React 组件则返回 true，否则返回 false。
  */
 function isValidReactComponent(component: any) {
-    return React.isValidElement(component);
+    return typeof component === 'function' && (React.isValidElement(component()) || !component());
 }
 
 /**
@@ -85,26 +85,35 @@ function getRenderredComponent(
     };
 }
 
-const withAuth
-    = (
-        WrappedComponent: React.ComponentType<any>,
-        authExpression: string,
+const {getAuthData} = authStore;
 
-        noAuthOption: NoAuthOption
-    ) =>
-        (props) => {
-            const {functionAuthList} = useSelector((state: any) => state.authSlice);
+const withAuth = (
+    WrappedComponent: React.ComponentType<any>,
+    authExpression: string,
+    noAuthOption: NoAuthOption
+) => {
 
-            const hasAuth = checkElementAuth(authExpression, functionAuthList);
-            const {renderredComponent: RenderredComponent, renderredProps} = getRenderredComponent(
-                hasAuth,
-                noAuthOption,
-                WrappedComponent
-            );
+    return props => {
+        const {functionAuthData} = getAuthData();
+        // // console.log(authExpression, '--authExpression');
+        // // console.log(functionAuthData, '--functionAuthData');
+        const hasAuth = checkElementAuth(authExpression, functionAuthData);
+        // // console.log(hasAuth, '--hasAuth');
+        const {
+            renderredComponent: RenderredComponent,
+            renderredProps
+        } = getRenderredComponent(
+            hasAuth,
+            noAuthOption,
+            WrappedComponent
+        );
 
-            const mergedProps = _.assign({}, props, renderredProps);
+        const mergedProps = _.assign({}, props, renderredProps);
 
-            return <RenderredComponent {...mergedProps} />;
-        };
+        return (
+            <RenderredComponent {...mergedProps} />
+        );
+    };
+};
 
 export default withAuth;

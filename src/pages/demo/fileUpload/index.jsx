@@ -17,7 +17,7 @@ const FileUpload = () => {
 
         setUploading(true);
 
-        console.log('formData', formData);
+        // console.log('formData', formData);
 
         axios({
             url: 'https://www.mocky.io/v2/5cc8019d300000980a055e76',
@@ -26,39 +26,39 @@ const FileUpload = () => {
             data: formData,
             onUploadProgress: (progressEvent) => {
                 // Do whatever you want with the native progress event
-                console.log('progressEvent', progressEvent);
+                // console.log('progressEvent', progressEvent);
                 const completedPercent = Math.round((progressEvent.loaded * 100) / progressEvent.total);
 
                 setPercent(completedPercent);
             }
         })
             .then((response) => {
-                console.log(response.data);
-                console.log(response.status);
-                console.log(response.statusText);
-                console.log(response.headers);
-                console.log(response.config);
+                // console.log(response.data);
+                // console.log(response.status);
+                // console.log(response.statusText);
+                // console.log(response.headers);
+                // console.log(response.config);
             })
             .catch((error) => {
                 setUploading(false);
                 if (error.response) {
                     // The request was made and the server responded with a status code
                     // that falls out of the range of 2xx
-                    console.log(error.response.data);
-                    console.log(error.response.status);
-                    console.log(error.response.headers);
+                    // console.log(error.response.data);
+                    // console.log(error.response.status);
+                    // console.log(error.response.headers);
                 } else if (error.request) {
                     // The request was made but no response was received
                     // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
                     // http.ClientRequest in node.js
-                    console.log(error.request);
+                    // console.log(error.request);
                 } else {
                     // Something happened in setting up the request that triggered an Error
-                    console.log('Error', error.message);
+                    // console.log('Error', error.message);
                 }
                 setPercent(0);
                 message.error(error.message);
-                // console.log(error.config)
+                // // console.log(error.config)
             });
     };
 

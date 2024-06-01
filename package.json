@@ -243,6 +243,7 @@
     "fetch-intercept": "^2.4.0",
     "file-loader": "^6.2.0",
     "helmet": "^7.0.0",
+    "hoist-non-react-statics": "^3.3.2",
     "html-to-image": "^1.11.11",
     "js-md5": "^0.7.3",
     "jschardet": "^3.0.0",

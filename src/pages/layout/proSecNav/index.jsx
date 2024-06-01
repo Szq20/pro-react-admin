@@ -64,6 +64,7 @@ const ProSecNav = () => {
 
     const menuItems = [
         {label: 'Home', key: '/', icon: <HomeOutlined />},
+        {label: 'WithAuthDemo', key: '/WithAuthDemo', icon: <GlobalOutlined />},
         {label: 'FileRenderTest', key: '/fileRender', icon: <ReadOutlined />},
         {label: 'Demo', key: '/demo', icon: <GlobalOutlined />},
         {label: 'cssDemo', key: '/cssDemo', icon: <GlobalOutlined />},
