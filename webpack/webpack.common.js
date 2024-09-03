@@ -10,6 +10,11 @@ const WebpackBar = require('webpackbar');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 const paths = require('./paths');
+const MonacoWebpackPlugin = require('monaco-editor-esm-webpack-plugin');
+
+// const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+
+console.log(MonacoWebpackPlugin, 'MonacoWebpackPlugin----');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -248,6 +253,18 @@ const config = {
                         loader: 'file-loader'
                     }
                 ]
+            },
+            {
+                test: /\.m?js/,
+                resolve: {
+                    fullySpecified: false
+                }
+            },
+            {
+                test: /\.js/,
+                enforce: 'pre',
+                include: /node_modules[\\\/]monaco-editor[\\\/]esm/,
+                use: MonacoWebpackPlugin.loader
             }
         ]
     }
@@ -256,5 +273,22 @@ const config = {
 if (USE_ANALYZE) {
     config.plugins.push(new BundleAnalyzerPlugin());
 }
+config.plugins.push(
+    // 代码编辑器配置
+    new MonacoWebpackPlugin({
+        languages: ['html', 'css', 'javascript', 'typescript', 'json', 'yaml'],
+        customLanguages: [
+            {
+                label: 'yaml',
+                entry: 'monaco-yaml',
+                worker: {
+                    id: 'monaco-yaml/yamlWorker',
+                    entry: 'monaco-yaml/yaml.worker'
+                }
+            }
+        ]
+    }),
+);
+
 
 module.exports = config;

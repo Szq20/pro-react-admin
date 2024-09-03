@@ -15,6 +15,8 @@ const SignUp = lazy(() => import('@pages/signup'));
 const Layout = lazy(() => import('@pages/layout'));
 const Home = lazy(() => import('@pages/home'));
 const Demo = lazy(() => import('@pages/demo'));
+const CodeEditDemo = lazy(() => import('@pages/editorDemo'));
+
 const WithAuthDemo = lazy(() => import('@pages/withAuthDemo'));
 
 const CssDemo = lazy(() => import('@pages/cssDemo'));
@@ -62,6 +64,14 @@ const rootRouter = [
                 key: '/WithAuthDemo',
                 auth: true,
                 element: lazyLoad(WithAuthDemo)
+            },
+            {
+                index: false,
+                path: 'CodeEditDemo',
+                name: 'CodeEditDemo',
+                key: '/CodeEditDemo',
+                auth: true,
+                element: lazyLoad(CodeEditDemo)
             },
             {
                 index: false,

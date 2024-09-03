@@ -4,17 +4,17 @@ import React, {useState, useEffect, useRef} from 'react';
 
 const UserIP = () => {
     const [userIp, setUserIp] = useState('');
-    const [count, setcount] = useState(0);
+    const [count, setCount] = useState(0);
     const prev = useRef();
     const updateRef = useRef();
 
     // const userAgent = new UserAgent()
-    useEffect(() => {
-        // console.log(count, '挂载、更新执行');
-        return () => { // 组件销毁时执行，更新也会执行
-            // console.log(count, '组件销毁时执行，更新也会执行 count是上一次的值');
-        };
-    }, [count]);
+    // useEffect(() => {
+    //     // console.log(count, '挂载、更新执行');
+    //     return () => { // 组件销毁时执行，更新也会执行
+    //         // console.log(count, '组件销毁时执行，更新也会执行 count是上一次的值');
+    //     };
+    // }, [count]);
 
     // useEffect(() => {
     //     // console.log(updateRef, 'update---');
@@ -50,7 +50,19 @@ const UserIP = () => {
             <h2>欢迎您，来自远方的朋友！</h2>
             {/* <h3>您的IP: {userIp}</h3>
             <h3> {userAgent.toString()}</h3> */}
-            <button onClick={() => setcount(count + 1)}>点击</button>
+            <button onClick={() => {
+                // setCount((count) => {
+                //     return count + 1;
+                // });
+                // setCount((count) => {
+                //     return count + 1;
+                // });
+                // setCount((count) => {
+                //     return count + 1;
+                // });
+            }}
+            >点击
+            </button>
             <h3> newCount{count} </h3>
             {/* <h3> prevCount:{prevCount} </h3> */}
         </>

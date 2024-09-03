@@ -67,6 +67,7 @@ const ProSecNav = () => {
         {label: 'WithAuthDemo', key: '/WithAuthDemo', icon: <GlobalOutlined />},
         {label: 'FileRenderTest', key: '/fileRender', icon: <ReadOutlined />},
         {label: 'Demo', key: '/demo', icon: <GlobalOutlined />},
+        {label: 'CodeEditDemo', key: '/CodeEditDemo', icon: <GlobalOutlined />},
         {label: 'cssDemo', key: '/cssDemo', icon: <GlobalOutlined />},
         {label: 'Parallax', key: '/parallax', icon: <FireOutlined />},
         {label: 'QrGenerate', key: '/qrcode', icon: <QrcodeOutlined />},
