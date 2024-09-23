@@ -5,12 +5,12 @@ Fe: <http://localhost:8080/>
 apiServer:<http://localhost:3000/>
 
 
-![check-status](https://img.shields.io/github/checks-status/wkylin/pro-react-admin/main 'check-status')
+<!-- ![check-status](https://img.shields.io/github/checks-status/wkylin/pro-react-admin/main 'check-status')
 ![build status](https://img.shields.io/github/workflow/status/wkylin/pro-react-admin/CodeQL 'build status')
 ![version-status](https://img.shields.io/github/package-json/v/wkylin/pro-react-admin 'version-status')
 ![license](https://img.shields.io/github/license/wkylin/pro-react-admin 'license')
 ![contributors](https://img.shields.io/github/contributors/wkylin/pro-react-admin 'contributors')
-[![DeepScan grade](https://deepscan.io/api/teams/16370/projects/24083/branches/739580/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16370&pid=24083&bid=739580)
+[![DeepScan grade](https://deepscan.io/api/teams/16370/projects/24083/branches/739580/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16370&pid=24083&bid=739580) -->
 
 ## 项目特性
 
@@ -46,7 +46,7 @@ apiServer:<http://localhost:3000/>
 6. TypeScript: v5.x.x[TypeScript](https://www.typescriptlang.org/)
 7. Vite: v4.x.x [Vite](https://vitejs.dev/)
 
-## Development
+<!-- ## Development
 
 ```bash
   1. git clone https://github.com/wkylin/pro-react-admin.git
@@ -63,8 +63,8 @@ apiServer:<http://localhost:3000/>
   5. Storybook -- A tool for UI development
     - npx storybook init
     - npm run storybook
-```
-
+``` -->
+<!-- 
 ## 脚手架--白泽 baize
 
 - 可以使用为此项目准备的脚手架开发--白泽 baize
@@ -72,9 +72,9 @@ apiServer:<http://localhost:3000/>
   ```bash
      > npm install baize --location=global
      > baize
-  ```
+  ``` -->
 
-## VSCode extension: 别名路径跳转
+<!-- ## VSCode extension: 别名路径跳转
 
 ```bash
     "alias-skip.mappings": {
@@ -88,13 +88,13 @@ apiServer:<http://localhost:3000/>
         '@routers': path.resolve('./src/routers'),
         '@utils': path.resolve('./src/utils'),
     }
-```
+``` -->
 
-## WebStorm 别名跳转设置
+<!-- ## WebStorm 别名跳转设置
 
-1. Settings >> Languages & Frameworks >> Javascript >> Webpack: 指定 Configuration file: webpack\webpack.common.js
+1. Settings >> Languages & Frameworks >> Javascript >> Webpack: 指定 Configuration file: webpack\webpack.common.js -->
 
-## 使用标准 commit 生成 changelog 标准化
+<!-- ## 使用标准 commit 生成 changelog 标准化
 
 - [conventional-changelog](https://github.com/conventional-changelog)
 - [standard-version](https://github.com/conventional-changelog/standard-version)
@@ -122,9 +122,9 @@ apiServer:<http://localhost:3000/>
   conventional-changelog -p angular -i CHANGELOG.md -s
   npm install -g standard-version
   "release": "standard-version --tag-prefix \"publish/\""
-  ```
+  ``` -->
 
-## 约定式提交
+<!-- ## 约定式提交
 
 1. [Conventional Commits](https://www.conventionalcommits.org/zh-hans/v1.0.0/)
 
@@ -171,17 +171,17 @@ apiServer:<http://localhost:3000/>
 6. [git commit 工具链](https://juejin.cn/post/7067166468797890591)
 7. [https://theodorusclarence.com/library/conventional-commit-readme](https://theodorusclarence.com/library/conventional-commit-readme)
 
-## React Code Splitting Library
+## React Code Splitting Library -->
 
 1. [Loadable Components](https://loadable-components.com/)
-
+<!-- 
 ## Mock Server
 
 ```bash
 // mock index.js
 npm run dev:faker
-```
-
+``` -->
+<!-- 
 ## Deployment
 
 1. Deployment: [Deployment] (<https://create-react-app.dev/docs/deployment>)
@@ -190,12 +190,12 @@ npm run dev:faker
    ```bash
    "predeploy": "npm run build:production",
     "deploy": "gh-pages -d dist",
-   ```
+   ``` -->
 
 ## 架构
 
 ![whiteboard_exported_image](https://github.com/wkylin/pro-react-admin/assets/1208330/c28852c2-7efe-407f-80f8-41d741ef3108)
-
+<!-- 
 ## 待解决
 
 1. 配备比较完善的脚手架：
@@ -204,9 +204,9 @@ npm run dev:faker
    - [https://docusaurus.io/](https://docusaurus.io/)
    - [https://d.umijs.org/zh-CN](https://d.umijs.org/zh-CN)
    - [Bit](https://bit.dev/)
-3. CacheRoute: [react-router-cache-route](https://github.com/CJY0208/react-router-cache-route)
+3. CacheRoute: [react-router-cache-route](https://github.com/CJY0208/react-router-cache-route) -->
 
-## Docusaurus
+<!-- ## Docusaurus
 
 1. Github:
 2. Demo:
@@ -217,9 +217,9 @@ npm run dev:faker
   - npm install -g snyk
   - snyk auth
   - snyk monitor
-```
+``` -->
 
-## Bit
+<!-- ## Bit
 
 1. [Bit.dev](https://bit.dev/)
 2. [Bit 实践](https://juejin.cn/post/7157576390177456159)
@@ -356,9 +356,9 @@ A CSS Module is a CSS file in which all class names and animation names are scop
     2. npm install  --save-dev @testing-library/react
     3. npm install cypress --save-dev
     4. npm install --save-dev @testing-library/react-hook
-```
+``` -->
 
-## Plugins
+<!-- ## Plugins
 
 1. [react-refresh-webpack-plugin](https://github.com/pmmmwh/react-refresh-webpack-plugin)
 2. [react-refresh](https://www.npmjs.com/package/react-refresh)
@@ -635,4 +635,4 @@ npm version [| major | minor | patch | premajor | preminor | prepatch | prerelea
 
 <!-- Give a ⭐️ if this project helped you! -->
 
-If you like the project, give it a star ⭐️, it will be a great encouragement to me.
+If you like the project, give it a star ⭐️, it will be a great encouragement to me. -->
