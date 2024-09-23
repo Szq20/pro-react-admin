@@ -1,27 +1,27 @@
-import { useState } from 'react'
+import {useState} from 'react';
 
 const useCopyToClipboard = () => {
-  const [result, setResult] = useState<null | { state: 'success' } | { state: 'error'; message: string }>(null)
+    const [result, setResult] = useState<null | { state: 'success' } | { state: 'error'; message: string }>(null);
 
-  const copy = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text)
-      setResult({ state: 'success' })
-    } catch (e: any) {
-      setResult({ state: 'error', message: e.message })
-      throw e
-    } finally {
-      // 👇 Show the result feedback for 2 seconds
-      setTimeout(() => {
-        setResult(null)
-      }, 2000)
-    }
-  }
+    const copy = async (text: string) => {
+        try {
+            await navigator.clipboard.writeText(text);
+            setResult({state: 'success'});
+        } catch (e: any) {
+            setResult({state: 'error', message: e.message});
+            throw e;
+        } finally {
+            // 👇 Show the result feedback for 2 seconds
+            setTimeout(() => {
+                setResult(null);
+            }, 2000);
+        }
+    };
 
-  // 👇 We want the result as a tuple
-  return [copy, result] as const
-}
-export default useCopyToClipboard
+    // 👇 We want the result as a tuple
+    return [copy, result] as const;
+};
+export default useCopyToClipboard;
 
 // export function Example() {
 //   const [inputText, setInputText] = useState('');

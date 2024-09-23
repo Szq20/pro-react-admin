@@ -79,7 +79,8 @@ const ProHeader = () => {
         >
             <div aria-hidden="true" className={styles.logo} onClick={() => redirectTo('/')}>
                 {/* Pro React <Tag>{process.env.DEPLOYED_ENV}</Tag> */}
-                Pro React Admin
+                {/* Pro React Admin */}
+                大碗米饭
             </div>
             <div className={styles.headerMeta}>
                 <div className={styles.headerMenu}>
@@ -103,7 +104,7 @@ const ProHeader = () => {
                         }}
                     >
                         <Space>
-                            <span style={{fontSize: 18}}>wkylin.w</span>
+                            <span style={{fontSize: 18}}>szq</span>
                             <DownOutlined />
                         </Space>
                     </Dropdown>

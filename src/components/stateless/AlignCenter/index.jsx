@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from './index.module.less'
+import React from 'react';
+import styles from './index.module.less';
 
-const AlignCenter = ({ children }) => <div className={styles.alignCenter}>{children}</div>
+const AlignCenter = ({children}) => <div className={styles.alignCenter}>{children}</div>;
 
-export default AlignCenter
+export default AlignCenter;

@@ -82,7 +82,7 @@ const config = {
         new HtmlWebpackPlugin({
             title: isDev ? '大碗米饭 React Dev' : '大碗米饭 React Prd',
             template: `${paths.public}/index.html`,
-            favicon: `${paths.public}/favicon.ico`,
+            favicon: `${paths.public}/favicon.jpg`,
             filename: 'index.html',
             inject: 'body',
             hash: true,

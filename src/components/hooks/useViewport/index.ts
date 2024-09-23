@@ -1,3 +1,3 @@
-import useViewport from './use-view-port'
+import useViewport from './use-view-port';
 
-export default useViewport
+export default useViewport;

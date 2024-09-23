@@ -40,7 +40,7 @@ export default defineConfig({
         //   inject: {
         //     data: {
         //       title: 'Pro React Vite',
-        //       favicon: path.resolve(__dirname, './public/favicon.ico'),
+        //       favicon: path.resolve(__dirname, './public/favicon.jpg'),
         //     },
         //   },
         // }),

@@ -19,7 +19,7 @@ const PrimaryNav = () => {
                     多路由设置
                 </Button>
                 {/* <Button type="link" icon={<TeamOutlined />} onClick={goToWkylin}>
-                    Skyline for wkylin.w
+                    Skyline for szq
                 </Button> */}
             </Space>
         </>

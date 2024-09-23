@@ -64,52 +64,52 @@ const ProSecNav = () => {
 
     const menuItems = [
         {label: 'Home', key: '/', icon: <HomeOutlined />},
-        {label: 'WithAuthDemo', key: '/WithAuthDemo', icon: <GlobalOutlined />},
-        {label: 'FileRenderTest', key: '/fileRender', icon: <ReadOutlined />},
         {label: 'Demo', key: '/demo', icon: <GlobalOutlined />},
-        {label: 'CodeEditDemo', key: '/CodeEditDemo', icon: <GlobalOutlined />},
+        {label: '权限管理', key: '/WithAuthDemo', icon: <GlobalOutlined />},
+        // {label: 'FileRenderTest', key: '/fileRender', icon: <ReadOutlined />},
+        // {label: 'CodeEditDemo', key: '/CodeEditDemo', icon: <GlobalOutlined />},
         {label: 'cssDemo', key: '/cssDemo', icon: <GlobalOutlined />},
-        {label: 'Parallax', key: '/parallax', icon: <FireOutlined />},
-        {label: 'QrGenerate', key: '/qrcode', icon: <QrcodeOutlined />},
-        {label: 'PrismRender', key: '/prism', icon: <FireOutlined />},
-        {label: 'ReactTilt', key: '/tilt', icon: <QrcodeOutlined />},
-        {label: 'Music', key: '/music', icon: <FireOutlined />},
+        {label: '动画库', key: '/parallax', icon: <FireOutlined />},
+        {label: '二维码生成', key: '/qrcode', icon: <QrcodeOutlined />},
+        {label: '代码高亮', key: '/prism', icon: <FireOutlined />},
+        // {label: 'ReactTilt', key: '/tilt', icon: <QrcodeOutlined />},
+        {label: '音乐播放器', key: '/music', icon: <FireOutlined />},
         {label: 'Three', key: '/three', icon: <QrcodeOutlined />},
         {label: 'Echarts', key: '/echarts', icon: <FireOutlined />},
-        {label: 'ChatGPT', key: '/markmap', icon: <QrcodeOutlined />},
-        {label: 'Mermaid', key: '/mermaid', icon: <FireOutlined />},
-        {
-            label: '技术栈',
-            key: '/sub-act',
-            icon: <HeatMapOutlined />,
-            children: [
-                {
-                    label: '前端技术栈',
-                    key: '/sub-coupons',
-                    icon: <FireOutlined />,
-                    children: [
-                        {label: 'Vue', key: '/coupons/add'},
-                        {label: 'Angular', key: '/coupons/edit'}
-                    ]
-                },
-                {label: '后端技术栈', key: '/product', icon: <DeploymentUnitOutlined />}
-            ]
-        },
-        {
-            label: '构建工具',
-            key: '/sub-list',
-            icon: <ApartmentOutlined />,
-            children: [
-                {label: 'Webpack', key: '/coupons/list'},
-                {label: 'Vite', key: '/order/list'}
-            ]
-        },
-        {
-            label: 'Error',
-            key: '/sub-error',
-            icon: <QuestionCircleOutlined />,
-            children: [{label: 'ErrorBoundary', key: '/error'}]
-        }
+        {label: 'ChatGPT', key: '/markmap', icon: <QrcodeOutlined />}
+        // {label: 'Mermaid', key: '/mermaid', icon: <FireOutlined />},
+        // {
+        //     label: '技术栈',
+        //     key: '/sub-act',
+        //     icon: <HeatMapOutlined />,
+        //     children: [
+        //         {
+        //             label: '前端技术栈',
+        //             key: '/sub-coupons',
+        //             icon: <FireOutlined />,
+        //             children: [
+        //                 {label: 'Vue', key: '/coupons/add'},
+        //                 {label: 'Angular', key: '/coupons/edit'}
+        //             ]
+        //         },
+        //         {label: '后端技术栈', key: '/product', icon: <DeploymentUnitOutlined />}
+        //     ]
+        // },
+        // {
+        //     label: '构建工具',
+        //     key: '/sub-list',
+        //     icon: <ApartmentOutlined />,
+        //     children: [
+        //         {label: 'Webpack', key: '/coupons/list'},
+        //         {label: 'Vite', key: '/order/list'}
+        //     ]
+        // },
+        // {
+        //     label: 'Error',
+        //     key: '/sub-error',
+        //     icon: <QuestionCircleOutlined />,
+        //     children: [{label: 'ErrorBoundary', key: '/error'}]
+        // }
     ];
 
     return (

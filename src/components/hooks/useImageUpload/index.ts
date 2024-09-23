@@ -1,3 +1,3 @@
-import useUploadImage from './image-upload'
+import useUploadImage from './image-upload';
 
-export default useUploadImage
+export default useUploadImage;

@@ -1,3 +1,3 @@
-import ProtectedRoute from './ProtectedRoute/inndex'
+import ProtectedRoute from './ProtectedRoute/inndex';
 
-export default ProtectedRoute
+export default ProtectedRoute;

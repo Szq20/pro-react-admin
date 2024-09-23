@@ -65,14 +65,14 @@ const rootRouter = [
                 auth: true,
                 element: lazyLoad(WithAuthDemo)
             },
-            {
-                index: false,
-                path: 'CodeEditDemo',
-                name: 'CodeEditDemo',
-                key: '/CodeEditDemo',
-                auth: true,
-                element: lazyLoad(CodeEditDemo)
-            },
+            // {
+            //     index: false,
+            //     path: 'CodeEditDemo',
+            //     name: 'CodeEditDemo',
+            //     key: '/CodeEditDemo',
+            //     auth: true,
+            //     element: lazyLoad(CodeEditDemo)
+            // },
             {
                 index: false,
                 path: 'demo',
@@ -137,18 +137,18 @@ const rootRouter = [
                 auth: false,
                 element: lazyLoad(ChatGpt)
             },
-            {
-                index: false,
-                path: 'mermaid',
-                name: 'ChatGPT Mermaid',
-                key: '/mermaid',
-                auth: false,
-                element: lazyLoad(Mermaid)
-            },
+            // {
+            //     index: false,
+            //     path: 'mermaid',
+            //     name: 'ChatGPT Mermaid',
+            //     key: '/mermaid',
+            //     auth: false,
+            //     element: lazyLoad(Mermaid)
+            // },
             {
                 index: false,
                 path: 'prism',
-                name: 'PrismRender',
+                name: '代码高亮',
                 key: '/prism',
                 auth: true,
                 element: lazyLoad(PrismRender)

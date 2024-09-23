@@ -492,7 +492,7 @@ npm version [| major | minor | patch | premajor | preminor | prepatch | prerelea
    │   ├── manifest.json
    │   ├── loading.svg
    │   ├── index.html
-   │   └── favicon.ico
+   │   └── favicon.jpg
    ├── packagehash.txt
    ├── package.json
    ├── package-lock.json
@@ -510,7 +510,7 @@ npm version [| major | minor | patch | premajor | preminor | prepatch | prerelea
    │   ├── react.bb194261542b956cd3ea.js.LICENSE.txt
    │   ├── react.bb194261542b956cd3ea.js
    │   ├── index.html
-   │   └── favicon.ico
+   │   └── favicon.jpg
    ├── compilation-stats.json
    ├── check-sentry.js
    ├── babel.config.js

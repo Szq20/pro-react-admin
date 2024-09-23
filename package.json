@@ -82,13 +82,13 @@
   "contributors": [
     {
       "name": "wkylin",
-      "email": "wkylin.w@gmail.com",
+      "email": "szq@gmail.com",
       "url": "https://github.com/orgs/aresray/teams"
     }
   ],
   "bugs": {
     "url": "https://github.com/wkylin/pro-react-admin/issues",
-    "email": "wkylin.w@gmail.com"
+    "email": "szq@gmail.com"
   },
   "license": "MIT",
   "devDependencies": {

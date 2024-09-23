@@ -1,5 +1,5 @@
 const lightTheme = {
-  colorPrimary: '#1677ff',
-}
+    colorPrimary: '#1677ff'
+};
 
-export default lightTheme
+export default lightTheme;
